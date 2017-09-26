@@ -1,30 +1,30 @@
 <?php
 
-include '/var/www/html/claytec-magento/app/Mage.php';
+include getcwd().'app/Mage.php';
 
 function xmlexportimportloader($class)
 {
-    include '/var/www/html/claytec-magento/shell/xmlexportimport/' . $class . '.php';
+    include 'xmlexportimport/' . $class . '.php';
 }
 
 function model_loader($class)
 {
-    include '/var/www/html/claytec-magento/shell/xmlexportimport/model/' . $class . '.php';
+    include 'xmlexportimport/model/' . $class . '.php';
 }
 
 function model_orm_loader($class)
 {
-    include '/var/www/html/claytec-magento/shell/xmlexportimport/model/orm/' . $class . '.php';
+    include 'xmlexportimport/model/orm/' . $class . '.php';
 }
 
 function data_loader($class)
 {
-    include '/var/www/html/claytec-magento/shell/xmlexportimport/data/' . $class . '.php';
+    include 'xmlexportimport/data/' . $class . '.php';
 }
 
 function connection_module($class)
 {
-    include '/var/www/html/claytec-magento/shell/xmlexportimport/connection/' . $class . '.php';
+    include 'xmlexportimport/connection/' . $class . '.php';
 }
 
 spl_autoload_register('xmlexportimportloader');

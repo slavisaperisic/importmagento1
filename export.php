@@ -1,6 +1,6 @@
 <?php
 
-include '/var/www/vhosts/claytec.de/httpdocs/shop/app/Mage.php';
+include getcwd().'app/Mage.php';
 
 function xmlexportimportloader($class)
 {
